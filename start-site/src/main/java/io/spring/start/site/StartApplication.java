@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import custom.CustomConfiguration;
 import io.spring.initializr.versionresolver.DependencyManagementVersionResolver;
 import io.spring.initializr.web.support.SaganInitializrMetadataUpdateStrategy;
 import io.spring.start.site.project.ProjectDescriptionCustomizerConfiguration;
@@ -45,7 +46,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
  */
 @EnableAutoConfiguration
 @SpringBootConfiguration
-@Import(ProjectDescriptionCustomizerConfiguration.class)
+@Import({ ProjectDescriptionCustomizerConfiguration.class, CustomConfiguration.class })
 @EnableCaching
 @EnableAsync
 public class StartApplication {
