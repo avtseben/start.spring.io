@@ -25,6 +25,7 @@ archetypes:
         - web
         - liquibase
         - amqp
+        - custom-dependency
       type: gradle-project
       language: java
       platformVersion: 2.3.3.RELEASE
